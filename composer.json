@@ -1,0 +1,60 @@
+{
+    "name": "aa-engineering/laravel-workday-manager",
+    "description": "A Laravel package for managing workday modifications - holidays moved to workdays and vice versa",
+    "keywords": [
+        "laravel",
+        "workday",
+        "holiday",
+        "calendar",
+        "working-days",
+        "business-days"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andras Makai",
+            "email": "packages@aaengineering.hu",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2|^8.3|^8.4",
+        "illuminate/support": "^11.0|^12.0",
+        "illuminate/database": "^11.0|^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0",
+        "pestphp/pest": "^3.0",
+        "pestphp/pest-plugin-laravel": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AAEngineering\\WorkdayManager\\": "src/",
+            "AAEngineering\\WorkdayManager\\Database\\Factories\\": "database/factories/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AAEngineering\\WorkdayManager\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AAEngineering\\WorkdayManager\\WorkdayManagerServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
